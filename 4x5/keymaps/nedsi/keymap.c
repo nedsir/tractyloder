@@ -635,17 +635,16 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 
 
 
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_MAIN] = LAYOUT( \
   KC_Q, KC_W, KC_E,    KC_R,    KC_T,                                       KC_Y, KC_ULCLK,    KC_IRCLK,   KC_O,   KC_P,    \
-  HOME_A, HOME_S, HOME_D, HOME_F, HOME_G,                                 HOME_H, KC_JLCLK,    KC_KRCLK,  HOME_L, HOME_SCLN, \
+  HOME_A, HOME_S, HOME_D, HOME_F, HOME_G,                                 HOME_H, HOME_J,   HOME_K,  HOME_L, HOME_SCLN, \
   KC_Z, KC_X, KC_C,    KC_V,    KC_B,                                       KC_N, KC_M,    KC_COMM, KC_DOT, KC_SLSH, \
       A(KC_SPC),KC_CAPS,                                                                    KC_MPLY, NXTPRV,          \
                                   MO(_SYMBOLS),                    MO(_NUMBERS),                                      \
-                                         REDO,   UNDO,   KC_DEL,  KC_ENT,                                           \
-                                       CACCCV, KC_TAB,    KC_SPACE,  ____
+                                       KC_TAB,   UNDO,   KC_DEL,  KC_ENT,                                           \
+                                       CACCCV, KC_SCROLL, KC_SPACE,  KC_SPACE
 ),
 
 [_SYMBOLS] = LAYOUT( \
@@ -672,7 +671,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_F9  , KC_F10 , KC_F11 , KC_F12 , _______,                                     KC_PMNS, KC_7,    KC_8,    KC_9,    KC_PSLS, \
     KC_F5  , KC_F6  , KC_F7  , KC_F8  , KC_LGUI,                                     KC_PPLS, KC_4   , KC_5   , KC_6   ,    KC_0, \
     KC_F1  , KC_F2  , KC_F3  , KC_F4  , _______,                                      KC_DOT, KC_1   , KC_2   , KC_3   ,  KC_DOT, \
-               RESET, _______,                                                                   _______, _______,               \
+               RESET, _______,                                                                   KC_0, KC_DOT,               \
                                             MO(_NAV),                  _______,                                                  \
                                             _______, _______, _______, _______,                                                 \
                                             _______, _______, _______, _______ 
